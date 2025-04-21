@@ -59,7 +59,7 @@ def paciente(env, nombre, recursos):
     salida = env.now
     tiempo_total = salida - llegada
     tiempos_totales.append(tiempo_total)
-    print(f"Paciente {nombre} sale de la sala de emergencias a las {salida:.1f} min (tiempo total: {tiempo_total:.1f} min)")
+    print(f"{nombre} sale de la sala de emergencias a las {salida:.1f} min (tiempo total: {tiempo_total:.1f} min)")
 
 def generador_pacientes(env, recursos):
     i = 0
@@ -85,7 +85,7 @@ def main():
     env.run(until=sim_time)
 
     promedio = sum(tiempos_totales) / len(tiempos_totales)
-    print(f'Tiempo promedio en sale de emergencia: {promedio: .2f} min')
+    print(f'Tiempo promedio en sala de emergencia: {promedio: .2f} min')
     print(f'Total de pacientes atendidos: {len(tiempos_totales)}')
 
 if __name__ == "__main__":
